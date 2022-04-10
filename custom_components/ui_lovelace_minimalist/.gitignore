@@ -2,5 +2,5 @@
 #   - from HACS
 #   - from /config/ui_lovelace_minimalist/cards
 #   - Setting correct language file
-__ui_minimalist__/
+#__ui_minimalist__/
 .installed
