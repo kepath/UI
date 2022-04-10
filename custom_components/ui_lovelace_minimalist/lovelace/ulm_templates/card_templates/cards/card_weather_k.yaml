@@ -1,5 +1,5 @@
 ---
-card_weather:
+card_weather_k:
   state:
     - value: "clear-night"
       icon: mdi:weather-night

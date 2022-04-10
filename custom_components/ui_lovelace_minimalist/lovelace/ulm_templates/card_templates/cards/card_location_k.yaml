@@ -1,4 +1,4 @@
-card_location:
+card_location_k:
   state:
     - styles:
         icon:
