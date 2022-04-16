@@ -1,26 +1,31 @@
 yellow_2_tap_action_entity_on:
-  state:
-    - operator: "template"
-      value: >
+  # state:
+  #   - operator: "template"
+  #     value: >
+  #       [[[
+  #         if (variables?.entity_2?.tap_action?.service_data?.entity_id) {
+  #           var tap_action_entity = variables.entity_2.tap_action.service_data.entity_id;
+  #           return states[tap_action_entity].state
+  #         }          
+  #       ]]]
+  #     styles:
+  #       icon:
+  #         - color: "rgba(var(--color-yellow),1)"
+  #       label:
+  #         - color: "rgba(var(--color-yellow-text),1)"
+  #       name:
+  #         - color: "rgba(var(--color-yellow-text),1)"
+  #       img_cell:
+  #         - background-color: "rgba(var(--color-yellow), 0.2)"
+  #       card:
+  #         - background-color: "rgba(var(--color-background-yellow),var(--opacity-bg))"
+  #     value: "on"
+  #     id: "on"
+    confirmation: 
+      text: >
         [[[
-          return (entity.attributes.hvac_action == 'heating')
+          if (variables?) {
+            return variables
+          }          
         ]]]
-      styles:
-        icon:
-          - color: "rgba(var(--color-yellow),1)"
-        label:
-          - color: "rgba(var(--color-yellow-text),1)"
-        name:
-          - color: "rgba(var(--color-yellow-text),1)"
-        img_cell:
-          - background-color: "rgba(var(--color-yellow), 0.2)"
-        card:
-          - background-color: "rgba(var(--color-background-yellow),var(--opacity-bg))"
-      # value: "home"
-      # id: "home"
-  tooltip: >
-    [[[
-      if (variables?.entity_2?.tap_action?.service_data?.entity_id) {
-        return variables.entity_2.tap_action.service_data.entity_id.attributes.state;
-      }
-    ]]]
+    

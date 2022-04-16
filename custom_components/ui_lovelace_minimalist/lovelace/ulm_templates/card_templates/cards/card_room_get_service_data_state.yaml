@@ -1,0 +1,31 @@
+card_room_get_service_data_state:
+  variables:
+    entity_1_service_data_state: >
+      [[[
+        if (variables?.entity_1?.tap_action?.service_data?.entity_id) {
+          var tap_action_entity = variables.entity_1.tap_action.service_data.entity_id;
+          return states[tap_action_entity].state
+        }          
+      ]]]
+    entity_2_service_data_state: >
+      [[[
+        if (variables?.entity_2?.tap_action?.service_data?.entity_id) {
+          var tap_action_entity = variables.entity_2.tap_action.service_data.entity_id;
+          return states[tap_action_entity].state
+        }          
+      ]]]
+    entity_3_service_data_state: >
+      [[[
+        if (variables?.entity_3?.tap_action?.service_data?.entity_id) {
+          var tap_action_entity = variables.entity_3.tap_action.service_data.entity_id;
+          return states[tap_action_entity].state
+        }          
+      ]]]
+    entity_4_service_data_state: >
+      [[[
+        if (variables?.entity_4?.tap_action?.service_data?.entity_id) {
+          var tap_action_entity = variables.entity_4.tap_action.service_data.entity_id;
+          return states[tap_action_entity].state
+        }          
+      ]]]
+
